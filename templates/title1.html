@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>测试</h1>
+<br>
+<br>
+<form action="/get" method="post">
+    new3错误：<input name="need_correct">
+    修改后：<input name="corrected">
+    <input type="submit" value="提交">
+</form>
+<br>
+<br>
+<ul>
+    {% for value in values %}
+    <li>{{value[1]}}-------{{value[2]}}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
