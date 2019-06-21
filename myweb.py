@@ -8,9 +8,9 @@ from flask import make_response,send_from_directory
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/download')
 def hello():
-    return 'hello'
+    return render_template('download.html')
 
 
 @app.route('/get',methods=['GET','POST'])
@@ -40,8 +40,8 @@ def get_it():
 
 @app.route('/send_file1')
 def post_it():
-    filename='correct.ibd'
-    directory=r'C:\ProgramData\MySQL\MySQL Server 8.0\Data\text_cleaning\\'
+    filename='语料库.rar'
+    directory=r'D:\语料库\\'
     response=make_response(send_from_directory(directory,filename,as_attachment=True))
     return response
 
