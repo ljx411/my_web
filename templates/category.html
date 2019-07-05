@@ -10,19 +10,18 @@
 <body>
 <br>
 <br>
-<h1>{{values[1]}}</h1>
+<h1>类别</h1>
 <br>
 <form action="" method="post">
-    <input hidden name="category",value={{values[1]}}}>
+    <!--<input hidden name="category",value={{values[1]}}}>-->
     源名：<input name="need_correct">
-    源网址：<input name="corrected">
     <input type="submit" value="提交">
 </form>
 <br>
 <br>
 <ul>
-    {% for value in values[0] %}
-    <li><a href="{{value[3]}}">{{value[2]}}</a>-------{{value[3]}}</li>
+    {% for value in values %}
+    <li><a href="{{value[2]}}">{{value[1]}}</a></li>
     {% endfor %}
 </ul>
 </body>
